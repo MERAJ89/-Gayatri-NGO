@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate - Gayatri Social Welfare Foundation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-heart" style="color: #2ecc71;"></i> Gayatri NGO
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="donate.html">Donate</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="volunteer.html">Volunteer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Make a Donation</h1>
+            <p>Your generosity changes lives</p>
+        </div>
+    </section>
+
+    <!-- Donation Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="donation-container">
+                        <h2 class="section-title text-center mb-4">Choose Your Donation Amount</h2>
+                        
+                        <!-- Predefined Amounts -->
+                        <div class="row mb-5">
+                            <div class="col-6 col-md-3 mb-3">
+                                <button class="btn btn-amount" onclick="selectAmount(100)">₹100</button>
+                            </div>
+                            <div class="col-6 col-md-3 mb-3">
+                                <button class="btn btn-amount" onclick="selectAmount(500)">₹500</button>
+                            </div>
+                            <div class="col-6 col-md-3 mb-3">
+                                <button class="btn btn-amount" onclick="selectAmount(1000)">₹1000</button>
+                            </div>
+                            <div class="col-6 col-md-3 mb-3">
+                                <button class="btn btn-amount" onclick="selectAmount('custom')">Custom</button>
+                            </div>
+                        </div>
+
+                        <!-- Donation Form -->
+                        <form id="donationForm" onsubmit="handleDonation(event)">
+                            <div class="mb-3">
+                                <label for="donationAmount" class="form-label">Donation Amount *</label>
+                                <div class="input-group">
+                                    <span class="input-group-text">₹</span>
+                                    <input type="number" class="form-control" id="donationAmount" placeholder="Enter amount" required min="10">
+                                </div>
+                                <small class="form-text text-muted">Minimum donation: ₹10</small>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="donorName" class="form-label">Full Name *</label>
+                                <input type="text" class="form-control" id="donorName" placeholder="Enter your full name" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="donorEmail" class="form-label">Email Address *</label>
+                                <input type="email" class="form-control" id="donorEmail" placeholder="Enter your email" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="donorPhone" class="form-label">Phone Number *</label>
+                                <input type="tel" class="form-control" id="donorPhone" placeholder="Enter your phone number" required pattern="[0-9]{10}">
+                                <small class="form-text text-muted">10-digit phone number</small>
+                            </div>
+
+                            <div class="mb-4 p-3 bg-light rounded">
+                                <p class="mb-0"><i class="fas fa-info-circle text-info"></i> <small><strong>Note:</strong> All donations support social welfare initiatives</small></p>
+                            </div>
+
+                            <button type="submit" class="btn btn-donate btn-lg w-100">Donate Now</button>
+                        </form>
+
+                        <div class="mt-4 p-3 bg-warning bg-opacity-10 rounded">
+                            <p class="mb-0"><i class="fas fa-shield-alt"></i> <small>Your donation is secure and will be processed safely.</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Your Impact</h2>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="impact-box">
+                        <h5>₹100</h5>
+                        <p>Provides meals for 2 families</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="impact-box">
+                        <h5>₹500</h5>
+                        <p>Provides school supplies for 5 children</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="impact-box">
+                        <h5>₹1000</h5>
+                        <p>Provides healthcare support for 1 family</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="footer-title">About Us</h5>
+                    <p><strong>Gayatri Social Welfare Foundation</strong></p>
+                    <p>Paschim Bardhaman, West Bengal, India</p>
+                    <p><small>Reg. Year: 2025 | Status: Active</small></p>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="footer-title">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="donate.html">Donate</a></li>
+                        <li><a href="volunteer.html">Volunteer</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="footer-title">Contact</h5>
+                    <p><i class="fas fa-map-marker-alt"></i> Paschim Bardhaman, West Bengal</p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:info@gayatringno.org">info@gayatringno.org</a></p>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="footer-title">Follow Us</h5>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="footer-text">&copy; 2025 Gayatri Social Welfare Foundation. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

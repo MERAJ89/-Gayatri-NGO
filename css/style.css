@@ -1,0 +1,757 @@
+/* =====================================================
+   GLOBAL STYLES
+   ===================================================== */
+:root {
+    --primary-blue: #3498db;
+    --secondary-green: #2ecc71;
+    --dark-blue: #2c3e50;
+    --light-bg: #ecf0f1;
+    --gray-text: #555555;
+    --white: #ffffff;
+    --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--gray-text);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* =====================================================
+   NAVBAR
+   ===================================================== */
+.navbar-custom {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
+    box-shadow: var(--shadow);
+    padding: 1rem 0;
+}
+
+.navbar-custom .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--white) !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.navbar-custom .nav-link {
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-weight: 500;
+    margin-left: 1rem;
+    transition: var(--transition);
+}
+
+.navbar-custom .nav-link:hover {
+    color: var(--secondary-green) !important;
+}
+
+.navbar-custom .nav-link.active {
+    color: var(--secondary-green) !important;
+    border-bottom: 2px solid var(--secondary-green);
+}
+
+/* =====================================================
+   HERO SECTION
+   ===================================================== */
+.hero-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+    margin-top: 60px;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    animation: fadeInDown 1s ease;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+    animation: fadeInUp 1s ease;
+}
+
+.btn-donate {
+    background: linear-gradient(135deg, var(--secondary-green) 0%, #27ae60 100%);
+    border: none;
+    color: var(--white);
+    padding: 0.75rem 2.5rem;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: var(--transition);
+    box-shadow: 0 4px 15px rgba(46, 204, 113, 0.4);
+}
+
+.btn-donate:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(46, 204, 113, 0.6);
+    color: var(--white);
+}
+
+/* =====================================================
+   SECTION TITLES
+   ===================================================== */
+.section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--dark-blue);
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: var(--secondary-green);
+    border-radius: 2px;
+}
+
+/* =====================================================
+   INTRO SECTION
+   ===================================================== */
+.intro-section {
+    padding-top: 5rem;
+}
+
+.intro-text {
+    font-size: 1.1rem;
+    color: var(--gray-text);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.intro-image {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* =====================================================
+   FOCUS AREAS SECTION
+   ===================================================== */
+.focus-areas {
+    background-color: var(--light-bg);
+}
+
+.focus-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    height: 100%;
+}
+
+.focus-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.focus-icon {
+    font-size: 3rem;
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+}
+
+.focus-card h5 {
+    color: var(--dark-blue);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.focus-card p {
+    font-size: 0.95rem;
+    color: var(--gray-text);
+}
+
+/* =====================================================
+   CTA SECTION
+   ===================================================== */
+.cta-section {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-green) 100%);
+    color: var(--white);
+}
+
+.cta-section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.cta-section p {
+    font-size: 1.1rem;
+    margin-bottom: 0;
+}
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+.footer {
+    background: var(--dark-blue);
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 5rem;
+}
+
+.footer-title {
+    color: var(--white);
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.footer-links a:hover {
+    color: var(--secondary-green);
+}
+
+.footer-divider {
+    border-color: rgba(255, 255, 255, 0.2);
+    margin: 2rem 0;
+}
+
+.footer-text {
+    margin: 0;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.social-icon:hover {
+    background: var(--secondary-green);
+    color: var(--white);
+    transform: translateY(-3px);
+}
+
+/* =====================================================
+   PAGE HEADER
+   ===================================================== */
+.page-header {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
+    color: var(--white);
+    padding: 6rem 0 3rem;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* =====================================================
+   ABOUT PAGE STYLES
+   ===================================================== */
+.org-details {
+    background: var(--light-bg);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.detail-item {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.detail-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.detail-item h5 {
+    color: var(--primary-blue);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.detail-item p {
+    color: var(--gray-text);
+    margin: 0;
+    font-size: 1.05rem;
+}
+
+.org-image {
+    padding: 2rem;
+}
+
+.mission-vision-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: var(--transition);
+}
+
+.mission-vision-card:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.mission-vision-icon {
+    font-size: 3rem;
+    color: var(--secondary-green);
+    margin-bottom: 1rem;
+}
+
+.mission-vision-card h3 {
+    color: var(--dark-blue);
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.trust-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: var(--transition);
+}
+
+.trust-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.trust-icon {
+    font-size: 2.5rem;
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+}
+
+.trust-card h5 {
+    color: var(--dark-blue);
+    font-weight: bold;
+}
+
+.impact-stat {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    color: var(--secondary-green);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+/* =====================================================
+   DONATE PAGE STYLES
+   ===================================================== */
+.donation-container {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.btn-amount {
+    background: var(--light-bg);
+    color: var(--dark-blue);
+    border: 2px solid transparent;
+    padding: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: var(--transition);
+    width: 100%;
+}
+
+.btn-amount:hover,
+.btn-amount.selected {
+    background: var(--primary-blue);
+    color: var(--white);
+    border-color: var(--primary-blue);
+}
+
+.form-container {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-label {
+    font-weight: 600;
+    color: var(--dark-blue);
+    margin-bottom: 0.5rem;
+}
+
+.form-control,
+.form-select {
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    transition: var(--transition);
+    font-size: 1rem;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+}
+
+.impact-box {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
+    color: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.impact-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(52, 152, 219, 0.4);
+}
+
+.impact-box h5 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+/* =====================================================
+   CONTACT PAGE STYLES
+   ===================================================== */
+.contact-info-card {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background: var(--light-bg);
+    border-radius: 10px;
+    transition: var(--transition);
+}
+
+.contact-info-card:hover {
+    background: var(--white);
+    box-shadow: var(--shadow);
+}
+
+.contact-info-icon {
+    font-size: 2rem;
+    color: var(--secondary-green);
+    min-width: 50px;
+}
+
+.contact-info-card h5 {
+    color: var(--dark-blue);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.contact-info-card p {
+    color: var(--gray-text);
+    margin: 0;
+}
+
+.contact-info-card a {
+    color: var(--primary-blue);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.contact-info-card a:hover {
+    color: var(--secondary-green);
+}
+
+/* =====================================================
+   VOLUNTEER PAGE STYLES
+   ===================================================== */
+.opportunity-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: var(--transition);
+    height: 100%;
+}
+
+.opportunity-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.opportunity-icon {
+    font-size: 2.5rem;
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+}
+
+.opportunity-card h5 {
+    color: var(--dark-blue);
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.opportunity-card p {
+    color: var(--gray-text);
+    font-size: 0.95rem;
+}
+
+/* =====================================================
+   UTILITY CLASSES
+   ===================================================== */
+.btn-primary {
+    background: var(--primary-blue);
+    border: none;
+    transition: var(--transition);
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+}
+
+.btn-outline-primary {
+    color: var(--primary-blue);
+    border-color: var(--primary-blue);
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.btn-outline-primary:hover {
+    background: var(--primary-blue);
+    border-color: var(--primary-blue);
+    color: var(--white);
+}
+
+.badge {
+    padding: 0.4rem 0.8rem;
+    font-weight: 600;
+}
+
+/* =====================================================
+   ANIMATIONS
+   ===================================================== */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =====================================================
+   RESPONSIVE DESIGN
+   ===================================================== */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .navbar-custom .nav-link {
+        margin-left: 0;
+        margin-top: 0.5rem;
+    }
+
+    .page-header {
+        padding: 4rem 0 2rem;
+    }
+
+    .page-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .page-header p {
+        font-size: 1rem;
+    }
+
+    .donation-container,
+    .form-container {
+        padding: 1.5rem;
+    }
+
+    .row {
+        margin-bottom: 1rem;
+    }
+
+    .btn-amount {
+        padding: 0.75rem;
+        font-size: 0.9rem;
+    }
+
+    .cta-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .cta-section p {
+        font-size: 1rem;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+
+    .intro-text {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section {
+        height: auto;
+        padding: 4rem 0;
+        margin-top: 50px;
+    }
+
+    .hero-title {
+        font-size: 1.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .section-title {
+        font-size: 1.3rem;
+    }
+
+    .footer {
+        padding-top: 2rem;
+    }
+
+    .footer-title {
+        font-size: 1rem;
+    }
+
+    .cta-section {
+        text-align: center;
+        padding: 2rem 0;
+    }
+
+    .cta-section .row {
+        flex-direction: column;
+    }
+
+    .cta-section .btn-donate {
+        width: 100%;
+    }
+
+    .contact-info-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-info-icon {
+        margin: 0 auto;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
