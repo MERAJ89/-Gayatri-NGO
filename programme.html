@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Programmes - Gayatri Social Welfare Foundation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand logo-only" href="index.html" title="Gayatri NGO">
+                <img src="images/Gsw-log.png" alt="Gayatri NGO Logo" class="navbar-logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="programme.html">Programmes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="donate.html">Donate</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="volunteer.html">Volunteer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Our Programmes</h1>
+            <p>Making a Real Difference Through Targeted Initiatives</p>
+        </div>
+    </section>
+
+    <!-- Programmes Section -->
+    <section class="programme-section">
+        <div class="container">
+            <h2 class="section-title-programme">Support Our Causes</h2>
+            <p class="section-subtitle">Every donation creates impact. Choose a program and make a difference in someone's life.</p>
+
+            <div class="row programme-grid">
+                <!-- 1. Mini Meal -->
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card programme-card">
+                        <div class="programme-card-image">
+                            <img src="images/mini_meal.png" alt="Mini Meal">
+                        </div>
+                        <div class="programme-card-body">
+                            <h5 class="programme-card-title">Mini Meal</h5>
+                            <p class="programme-card-description">Mini Meal - Provide nutritious food to a person in need.</p>
+                            <div class="programme-price-section">
+                                <div class="quantity-selector">
+                                    <span class="quantity-label">Number of People</span>
+                                    <div class="quantity-controls">
+                                        <button class="qty-btn qty-minus" onclick="changeQuantity(this, -1)">−</button>
+                                        <span class="quantity-display">1</span>
+                                        <button class="qty-btn" onclick="changeQuantity(this, 1)">+</button>
+                                    </div>
+                                </div>
+                                <div class="programme-price">
+                                    <span class="price-label">Per Mini Meal</span>
+                                    <span class="price-amount">₹35</span>
+                                </div>
+                                <div class="programme-price">
+                                    <span class="price-label">Total Amount</span>
+                                    <span class="total-price-display" data-base-price="35">₹35</span>
+                                </div>
+                                <button class="btn-donate-programme" onclick="handleDonate(this, 35, 'Mini Meal')">Donate Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Thali -->
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card programme-card">
+                        <div class="programme-card-image">
+                            <img src="images/thali.png" alt="Thali">
+                        </div>
+                        <div class="programme-card-body">
+                            <h5 class="programme-card-title">Thali</h5>
+                            <p class="programme-card-description">Serve a complete traditional meal to a needy person.</p>
+                            <div class="programme-price-section">
+                                <div class="quantity-selector">
+                                    <span class="quantity-label">Number of People</span>
+                                    <div class="quantity-controls">
+                                        <button class="qty-btn qty-minus" onclick="changeQuantity(this, -1)">−</button>
+                                        <span class="quantity-display">1</span>
+                                        <button class="qty-btn" onclick="changeQuantity(this, 1)">+</button>
+                                    </div>
+                                </div>
+                                <div class="programme-price">
+                                    <span class="price-label">Per Thali</span>
+                                    <span class="price-amount">₹75</span>
+                                </div>
+                                <div class="programme-price">
+                                    <span class="price-label">Total Amount</span>
+                                    <span class="total-price-display" data-base-price="75">₹75</span>
+                                </div>
+                                <button class="btn-donate-programme" onclick="handleDonate(this, 75, 'Traditional Thali')">Donate Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Biryani -->
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card programme-card programme-highlight">
+                        <div class="programme-card-image">
+                            <img src="images/biryani.png" alt="Biryani">
+                        </div>
+                        <div class="programme-card-body">
+                            <h5 class="programme-card-title">Biryani</h5>
+                            <p class="programme-card-description">Share a special biryani meal with someone deserving.</p>
+                            <div class="programme-price-section">
+                                <div class="quantity-selector">
+                                    <span class="quantity-label">Number of People</span>
+                                    <div class="quantity-controls">
+                                        <button class="qty-btn qty-minus" onclick="changeQuantity(this, -1)">−</button>
+                                        <span class="quantity-display">1</span>
+                                        <button class="qty-btn" onclick="changeQuantity(this, 1)">+</button>
+                                    </div>
+                                </div>
+                                <div class="programme-price">
+                                    <span class="price-label">Per Biryani</span>
+                                    <span class="price-amount">₹100</span>
+                                </div>
+                                <div class="programme-price">
+                                    <span class="price-label">Total Amount</span>
+                                    <span class="total-price-display" data-base-price="100">₹100</span>
+                                </div>
+                                <button class="btn-donate-programme" onclick="handleDonate(this, 100, 'Special Biryani')">Donate Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Stray Dog Feeding -->
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card programme-card">
+                        <div class="programme-card-image">
+                           <img src="images/stray-dog.png" alt="stray dog feeding">
+                        </div>
+                        <div class="programme-card-body">
+                            <h5 class="programme-card-title">Feed a Stray Dog</h5>
+                            <p class="programme-card-description">Provide nourishing food to a hungry street dog.</p>
+                            <div class="programme-price-section">
+                                <div class="quantity-selector">
+                                    <span class="quantity-label">Number of Dogs</span>
+                                    <div class="quantity-controls">
+                                        <button class="qty-btn qty-minus" onclick="changeQuantity(this, -1)">−</button>
+                                        <span class="quantity-display">1</span>
+                                        <button class="qty-btn" onclick="changeQuantity(this, 1)">+</button>
+                                    </div>
+                                </div>
+                                <div class="programme-price">
+                                    <span class="price-label">Per Dog</span>
+                                    <span class="price-amount">₹35</span>
+                                </div>
+                                <div class="programme-price">
+                                    <span class="price-label">Total Amount</span>
+                                    <span class="total-price-display" data-base-price="35">₹35</span>
+                                </div>
+                                <button class="btn-donate-programme" onclick="handleDonate(this, 35, 'Feed a Stray Dog')">Donate Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Cow Feeding -->
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card programme-card">
+                        <div class="programme-card-image">
+                            <img src="images/stray-cow.png" alt="Cow Feeding">
+                        </div>
+                        <div class="programme-card-body">
+                            <h5 class="programme-card-title">Cow Feeding</h5>
+                            <p class="programme-card-description">Support animal welfare by feeding a cow.</p>
+                            <div class="programme-price-section">
+                                <div class="quantity-selector">
+                                    <span class="quantity-label">Number of Cows</span>
+                                    <div class="quantity-controls">
+                                        <button class="qty-btn qty-minus" onclick="changeQuantity(this, -1)">−</button>
+                                        <span class="quantity-display">1</span>
+                                        <button class="qty-btn" onclick="changeQuantity(this, 1)">+</button>
+                                    </div>
+                                </div>
+                                <div class="programme-price">
+                                    <span class="price-label">Per Cow</span>
+                                    <span class="price-amount">₹100</span>
+                                </div>
+                                <div class="programme-price">
+                                    <span class="price-label">Total Amount</span>
+                                    <span class="total-price-display" data-base-price="100">₹100</span>
+                                </div>
+                                <button class="btn-donate-programme" onclick="handleDonate(this, 100, 'Cow Feeding')">Donate Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. Dog Collar Kit -->
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card programme-card">
+                        <div class="programme-card-image">
+                            <img src="images/dog-color-kit.png" alt="Dog Collar">
+                        </div>
+                        <div class="programme-card-body">
+                            <h5 class="programme-card-title">Dog Collar Kit</h5>
+                            <p class="programme-card-description">Provide safety equipment for street dogs.</p>
+                            <div class="programme-price-section">
+                                <div class="quantity-selector">
+                                    <span class="quantity-label">Number of Kits</span>
+                                    <div class="quantity-controls">
+                                        <button class="qty-btn qty-minus" onclick="changeQuantity(this, -1)">−</button>
+                                        <span class="quantity-display">1</span>
+                                        <button class="qty-btn" onclick="changeQuantity(this, 1)">+</button>
+                                    </div>
+                                </div>
+                                <div class="programme-price">
+                                    <span class="price-label">Per Kit</span>
+                                    <span class="price-amount">₹300</span>
+                                </div>
+                                <div class="programme-price">
+                                    <span class="price-label">Total Amount</span>
+                                    <span class="total-price-display" data-base-price="300">₹300</span>
+                                </div>
+                                <button class="btn-donate-programme" onclick="handleDonate(this, 300, 'Dog Collar Kit')">Donate Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. Grocery Kit -->
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card programme-card">
+                        <div class="programme-card-image">
+                            <img src="images/grocery-kit.png" alt="Grocery Kit">
+                        </div>
+                        <div class="programme-card-body">
+                            <h5 class="programme-card-title">Grocery Kit</h5>
+                            <p class="programme-card-description">Essential food items for families in need.</p>
+                            <div class="programme-price-section">
+                                <div class="quantity-selector">
+                                    <span class="quantity-label">Number of Kits</span>
+                                    <div class="quantity-controls">
+                                        <button class="qty-btn qty-minus" onclick="changeQuantity(this, -1)">−</button>
+                                        <span class="quantity-display">1</span>
+                                        <button class="qty-btn" onclick="changeQuantity(this, 1)">+</button>
+                                    </div>
+                                </div>
+                                <div class="programme-price">
+                                    <span class="price-label">Per Kit</span>
+                                    <span class="price-amount">₹800</span>
+                                </div>
+                                <div class="programme-price">
+                                    <span class="price-label">Total Amount</span>
+                                    <span class="total-price-display" data-base-price="800">₹800</span>
+                                </div>
+                                <button class="btn-donate-programme" onclick="handleDonate(this, 800, 'Grocery Kit')">Donate Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8. School Bag -->
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card programme-card">
+                        <div class="programme-card-image">
+                            <img src="images/school-bag.png" alt="School Bag">
+                        </div>
+                        <div class="programme-card-body">
+                            <h5 class="programme-card-title">School Bag</h5>
+                            <p class="programme-card-description">Help a child go to school with a new bag and supplies.</p>
+                            <div class="programme-price-section">
+                                <div class="quantity-selector">
+                                    <span class="quantity-label">Number of Children</span>
+                                    <div class="quantity-controls">
+                                        <button class="qty-btn qty-minus" onclick="changeQuantity(this, -1)">−</button>
+                                        <span class="quantity-display">1</span>
+                                        <button class="qty-btn" onclick="changeQuantity(this, 1)">+</button>
+                                    </div>
+                                </div>
+                                <div class="programme-price">
+                                    <span class="price-label">Per Bag</span>
+                                    <span class="price-amount">₹500</span>
+                                </div>
+                                <div class="programme-price">
+                                    <span class="price-label">Total Amount</span>
+                                    <span class="total-price-display" data-base-price="500">₹500</span>
+                                </div>
+                                <button class="btn-donate-programme" onclick="handleDonate(this, 500, 'School Bag')">Donate Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 9. Napkin Distribution -->
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card programme-card">
+                        <div class="programme-card-image">
+                            <img src="images/napkin.png" alt="Napkin">
+                        </div>
+                        <div class="programme-card-body">
+                            <h5 class="programme-card-title">Give a Napkin</h5>
+                            <p class="programme-card-description">Provide hygiene essentials to a needy person.</p>
+                            <div class="programme-price-section">
+                                <div class="quantity-selector">
+                                    <span class="quantity-label">Number of People</span>
+                                    <div class="quantity-controls">
+                                        <button class="qty-btn qty-minus" onclick="changeQuantity(this, -1)">−</button>
+                                        <span class="quantity-display">1</span>
+                                        <button class="qty-btn" onclick="changeQuantity(this, 1)">+</button>
+                                    </div>
+                                </div>
+                                <div class="programme-price">
+                                    <span class="price-label">Per Person</span>
+                                    <span class="price-amount">₹40</span>
+                                </div>
+                                <div class="programme-price">
+                                    <span class="price-label">Total Amount</span>
+                                    <span class="total-price-display" data-base-price="40">₹40</span>
+                                </div>
+                                <button class="btn-donate-programme" onclick="handleDonate(this, 40, 'Give a Napkin')">Donate Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 10. Water Bowl for Birds -->
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card programme-card">
+                        <div class="programme-card-image">
+                            <img src="images/bird-bowl.png" alt="Bird Bowl">
+                        </div>
+                        <div class="programme-card-body">
+                            <h5 class="programme-card-title">Water Bowl for Birds</h5>
+                            <p class="programme-card-description">Provide fresh water to birds during hot weather.</p>
+                            <div class="programme-price-section">
+                                <div class="quantity-selector">
+                                    <span class="quantity-label">Number of Bowls</span>
+                                    <div class="quantity-controls">
+                                        <button class="qty-btn qty-minus" onclick="changeQuantity(this, -1)">−</button>
+                                        <span class="quantity-display">1</span>
+                                        <button class="qty-btn" onclick="changeQuantity(this, 1)">+</button>
+                                    </div>
+                                </div>
+                                <div class="programme-price">
+                                    <span class="price-label">Per Bowl</span>
+                                    <span class="price-amount">₹250</span>
+                                </div>
+                                <div class="programme-price">
+                                    <span class="price-label">Total Amount</span>
+                                    <span class="total-price-display" data-base-price="250">₹250</span>
+                                </div>
+                                <button class="btn-donate-programme" onclick="handleDonate(this, 250, 'Water Bowl for Birds')">Donate Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 11. Bird House -->
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card programme-card programme-highlight">
+                        <div class="programme-card-image">
+                            <img src="images/bird-house.png" alt="Bird House">
+                        </div>
+                        <div class="programme-card-body">
+                            <h5 class="programme-card-title">Bird House</h5>
+                            <p class="programme-card-description">Create shelter for birds with a beautiful bird house.</p>
+                            <div class="programme-price-section">
+                                <div class="quantity-selector">
+                                    <span class="quantity-label">Number of Houses</span>
+                                    <div class="quantity-controls">
+                                        <button class="qty-btn qty-minus" onclick="changeQuantity(this, -1)">−</button>
+                                        <span class="quantity-display">1</span>
+                                        <button class="qty-btn" onclick="changeQuantity(this, 1)">+</button>
+                                    </div>
+                                </div>
+                                <div class="programme-price">
+                                    <span class="price-label">Per House</span>
+                                    <span class="price-amount">₹350</span>
+                                </div>
+                                <div class="programme-price">
+                                    <span class="price-label">Total Amount</span>
+                                    <span class="total-price-display" data-base-price="350">₹350</span>
+                                </div>
+                                <button class="btn-donate-programme" onclick="handleDonate(this, 350, 'Bird House')">Donate Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 12. Tailoring Machine -->
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card programme-card">
+                        <div class="programme-card-image">
+                            <img src="images/tailoring-machine.png" alt="Tailoring Machine">
+                        </div>
+                        <div class="programme-card-body">
+                            <h5 class="programme-card-title">Tailoring Machine</h5>
+                            <p class="programme-card-description">Empower someone with skills and livelihood opportunity.</p>
+                            <div class="programme-price-section">
+                                <div class="quantity-selector">
+                                    <span class="quantity-label">Number of Machines</span>
+                                    <div class="quantity-controls">
+                                        <button class="qty-btn qty-minus" onclick="changeQuantity(this, -1)">−</button>
+                                        <span class="quantity-display">1</span>
+                                        <button class="qty-btn" onclick="changeQuantity(this, 1)">+</button>
+                                    </div>
+                                </div>
+                                <div class="programme-price">
+                                    <span class="price-label">Per Machine</span>
+                                    <span class="price-amount">₹7000</span>
+                                </div>
+                                <div class="programme-price">
+                                    <span class="price-label">Total Amount</span>
+                                    <span class="total-price-display" data-base-price="7000">₹7000</span>
+                                </div>
+                                <button class="btn-donate-programme" onclick="handleDonate(this, 7000, 'Tailoring Machine')">Donate Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 13. Wheelchair -->
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card programme-card">
+                        <div class="programme-card-image">
+                            <img src="images/wheelchair.png" alt="Wheelchair">
+                        </div>
+                        <div class="programme-card-body">
+                            <h5 class="programme-card-title">Wheelchair</h5>
+                            <p class="programme-card-description">Enable mobility and independence for differently-abled persons.</p>
+                            <div class="programme-price-section">
+                                <div class="quantity-selector">
+                                    <span class="quantity-label">Number of People</span>
+                                    <div class="quantity-controls">
+                                        <button class="qty-btn qty-minus" onclick="changeQuantity(this, -1)">−</button>
+                                        <span class="quantity-display">1</span>
+                                        <button class="qty-btn" onclick="changeQuantity(this, 1)">+</button>
+                                    </div>
+                                </div>
+                                <div class="programme-price">
+                                    <span class="price-label">Per Person</span>
+                                    <span class="price-amount">₹6400</span>
+                                </div>
+                                <div class="programme-price">
+                                    <span class="price-label">Total Amount</span>
+                                    <span class="total-price-display" data-base-price="6400">₹6400</span>
+                                </div>
+                                <button class="btn-donate-programme" onclick="handleDonate(this, 6400, 'Wheelchair')">Donate Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 14. Educate a Child -->
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card programme-card">
+                        <div class="programme-card-image">
+                            <img src="images/educate-child.png" alt="Educate">
+                        </div>
+                        <div class="programme-card-body">
+                            <h5 class="programme-card-title">Educate a Child</h5>
+                            <p class="programme-card-description">Support a child's education and secure their future.</p>
+                            <div class="programme-price-section">
+                                <div class="quantity-selector">
+                                    <span class="quantity-label">Number of Children</span>
+                                    <div class="quantity-controls">
+                                        <button class="qty-btn qty-minus" onclick="changeQuantity(this, -1)">−</button>
+                                        <span class="quantity-display">1</span>
+                                        <button class="qty-btn" onclick="changeQuantity(this, 1)">+</button>
+                                    </div>
+                                </div>
+                                <div class="programme-price">
+                                    <span class="price-label">Per Child</span>
+                                    <span class="price-amount">₹800</span>
+                                </div>
+                                <div class="programme-price">
+                                    <span class="price-label">Total Amount</span>
+                                    <span class="total-price-display" data-base-price="800">₹800</span>
+                                </div>
+                                <button class="btn-donate-programme" onclick="handleDonate(this, 800, 'Educate a Child')">Donate Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 15. Blanket -->
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card programme-card">
+                        <div class="programme-card-image">
+                            <img src="images/blanket.png" alt="Blanket">
+                        </div>
+                        <div class="programme-card-body">
+                            <h5 class="programme-card-title">Blanket</h5>
+                            <p class="programme-card-description">Provide warmth and comfort during cold months.</p>
+                            <div class="programme-price-section">
+                                <div class="quantity-selector">
+                                    <span class="quantity-label">Number of People</span>
+                                    <div class="quantity-controls">
+                                        <button class="qty-btn qty-minus" onclick="changeQuantity(this, -1)">−</button>
+                                        <span class="quantity-display">1</span>
+                                        <button class="qty-btn" onclick="changeQuantity(this, 1)">+</button>
+                                    </div>
+                                </div>
+                                <div class="programme-price">
+                                    <span class="price-label">Per Person</span>
+                                    <span class="price-amount">₹200</span>
+                                </div>
+                                <div class="programme-price">
+                                    <span class="price-label">Total Amount</span>
+                                    <span class="total-price-display" data-base-price="200">₹200</span>
+                                </div>
+                                <button class="btn-donate-programme" onclick="handleDonate(this, 200, 'Blanket')">Donate Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 16. Birthday Cake -->
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card programme-card programme-highlight">
+                        <div class="programme-card-image">
+                            <img src="images/cake.png" alt="Birthday Cake">
+                        </div>
+                        <div class="programme-card-body">
+                            <h5 class="programme-card-title">Birthday Celebration</h5>
+                            <p class="programme-card-description">Celebrate 20 children's birthdays with cake and joy.</p>
+                            <div class="programme-price-section">
+                                <div class="quantity-selector">
+                                    <span class="quantity-label">Number of Events</span>
+                                    <div class="quantity-controls">
+                                        <button class="qty-btn qty-minus" onclick="changeQuantity(this, -1)">−</button>
+                                        <span class="quantity-display">1</span>
+                                        <button class="qty-btn" onclick="changeQuantity(this, 1)">+</button>
+                                    </div>
+                                </div>
+                                <div class="programme-price">
+                                    <span class="price-label">For 20 Children</span>
+                                    <span class="price-amount">₹1600</span>
+                                </div>
+                                <div class="programme-price">
+                                    <span class="price-label">Total Amount</span>
+                                    <span class="total-price-display" data-base-price="1600">₹1600</span>
+                                </div>
+                                <button class="btn-donate-programme" onclick="handleDonate(this, 1600, 'Birthday Cake')">Donate Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 17. Free Thali for Elders -->
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card programme-card">
+                        <div class="programme-card-image">
+                            <img src="images/elder-thali.png" alt="Elders Thali">
+                        </div>
+                        <div class="programme-card-body">
+                            <h5 class="programme-card-title">Thali Seva for Elders</h5>
+                            <p class="programme-card-description">Provide nutritious meals to abandoned elders.</p>
+                            <div class="programme-price-section">
+                                <div class="quantity-selector">
+                                    <span class="quantity-label">Number of Elders</span>
+                                    <div class="quantity-controls">
+                                        <button class="qty-btn qty-minus" onclick="changeQuantity(this, -1)">−</button>
+                                        <span class="quantity-display">1</span>
+                                        <button class="qty-btn" onclick="changeQuantity(this, 1)">+</button>
+                                    </div>
+                                </div>
+                                <div class="programme-price">
+                                    <span class="price-label">Per Elder</span>
+                                    <span class="price-amount">₹100</span>
+                                </div>
+                                <div class="programme-price">
+                                    <span class="price-label">Total Amount</span>
+                                    <span class="total-price-display" data-base-price="100">₹100</span>
+                                </div>
+                                <button class="btn-donate-programme" onclick="handleDonate(this, 100, 'Thali Seva for Elders')">Donate Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 18. Virtual Cake Cutting -->
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card programme-card">
+                        <div class="programme-card-image">
+                            <img src="images/virtual-celebration.png" alt="Virtual Celebration">
+                        </div>
+                        <div class="programme-card-body">
+                            <h5 class="programme-card-title">Virtual Celebration</h5>
+                            <p class="programme-card-description">Host a virtual cake cutting celebration online.</p>
+                            <div class="programme-price-section">
+                                <div class="quantity-selector">
+                                    <span class="quantity-label">Number of Events</span>
+                                    <div class="quantity-controls">
+                                        <button class="qty-btn qty-minus" onclick="changeQuantity(this, -1)">−</button>
+                                        <span class="quantity-display">1</span>
+                                        <button class="qty-btn" onclick="changeQuantity(this, 1)">+</button>
+                                    </div>
+                                </div>
+                                <div class="programme-price">
+                                    <span class="price-label">Per Event</span>
+                                    <span class="price-amount">₹4000</span>
+                                </div>
+                                <div class="programme-price">
+                                    <span class="price-label">Total Amount</span>
+                                    <span class="total-price-display" data-base-price="4000">₹4000</span>
+                                </div>
+                                <button class="btn-donate-programme" onclick="handleDonate(this, 4000, 'Virtual Cake Cutting Celebration')">Donate Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="footer-title">About Us</h5>
+                    <p><strong>Gayatri Social Welfare Foundation</strong></p>
+                    <p>Paschim Bardhaman, West Bengal, India</p>
+                    <p><small>Reg. Year: 2025 | Status: Active</small></p>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="footer-title">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="donate.html">Donate</a></li>
+                        <li><a href="volunteer.html">Volunteer</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="footer-title">Contact</h5>
+                    <p><i class="fas fa-map-marker-alt"></i> Paschim Bardhaman, West Bengal</p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:info@gayatringno.org">info@gayatringno.org</a>
+                    </p>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="footer-title">Follow Us</h5>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="footer-text">&copy; 2025 Gayatri Social Welfare Foundation. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

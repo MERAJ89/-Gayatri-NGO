@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,12 +9,13 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">
-                <i class="fas fa-heart" style="color: #2ecc71;"></i> Gayatri NGO
+            <a class="navbar-brand logo-only" href="index.html" title="Gayatri NGO">
+                <img src="images/Gsw-log.png" alt="Gayatri NGO Logo" class="navbar-logo">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -25,6 +27,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="programme.html">Programmes</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="donate.html">Donate</a>
@@ -44,7 +49,7 @@
     <section class="hero-section">
         <div class="hero-overlay"></div>
         <div class="container hero-content">
-            <h1 class="hero-title">Gayatri Social Welfare Foundation</h1>
+            <h1 class="hero-title">GSW Foundation</h1>
             <p class="hero-subtitle">Making a Difference, One Step at a Time</p>
             <a href="donate.html" class="btn btn-donate btn-lg">Donate Now</a>
         </div>
@@ -56,13 +61,32 @@
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <h2 class="section-title">About Our Organization</h2>
-                    <p class="intro-text">Gayatri Social Welfare Foundation is a registered NGO dedicated to uplift communities and create positive social change. Founded in 2025, we work tirelessly to support those in need across Paschim Bardhaman, West Bengal.</p>
-                    <p class="intro-text">Our mission is to build a compassionate society where every individual has access to basic necessities, education, and opportunities to thrive.</p>
+                    <p class="intro-text">Our Organization is committed to serving society by focusing on three essential
+                        pillars—education, food, and shelter. We work towards uplifting underprivileged individuals and
+                        communities by ensuring access to basic necessities and opportunities for a dignified life.
+                        Through our initiatives, we aim to create long-term, sustainable impact at the grassroots level.
+
+                        Our Mission
+                        To empower individuals by providing quality education, ensuring access to nutritious food, and
+                        supporting safe and secure shelter, enabling them to lead self-reliant and dignified lives.
+
+                        Our Vision
+                        To build an inclusive society where every individual has access to basic needs, equal
+                        opportunities, and the resources required to achieve their full potential.
+
+                        Our Objectives
+
+                        To promote education by providing learning support, skill development, and career guidance to
+                        students and youth.
+                        To reduce hunger by distributing food and supporting nutrition programs for the needy.
+                        To assist vulnerable communities with shelter support and basic living necessities.
+                        To collaborate with organizations and stakeholders to create sustainable social impact.
+                        To encourage self-reliance and upliftment through community-driven initiatives.</p>
                     <a href="about.html" class="btn btn-outline-primary">Learn More</a>
                 </div>
                 <div class="col-lg-6 text-center mt-4 mt-lg-0">
                     <div class="intro-image">
-                        <i class="fas fa-hands-helping fa-5x" style="color: #2ecc71;"></i>
+                        <img src="images/img1.jpg" alt="">
                     </div>
                 </div>
             </div>
@@ -74,60 +98,359 @@
         <div class="container">
             <h2 class="section-title text-center mb-5">Our Focus Areas</h2>
             <div class="row g-4">
-                <div class="col-lg-4 col-md-6">
+                <!-- Support the Poor -->
+                <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="focus-card">
-                        <div class="focus-icon">
-                            <i class="fas fa-heart"></i>
+                        <div class="focus-card-image">
+                            <img src="images/Poor_Support.jpg" alt="Support the Poor">
                         </div>
-                        <h5>Support the Poor</h5>
-                        <p>Providing basic necessities and financial support to underprivileged families in our community.</p>
+                        <div class="focus-card-content">
+                            <h5 class="focus-card-title">Support the Poor</h5>
+                            <p class="focus-card-description">Providing basic necessities and financial support to underprivileged families in our community.</p>
+                            <a href="donate.html" class="btn btn-card-donate btn-sm mt-auto">Donate Now</a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
+
+                <!-- Education -->
+                <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="focus-card">
-                        <div class="focus-icon">
-                            <i class="fas fa-book"></i>
+                        <div class="focus-card-image">
+                            <img src="images/Education_Img.jpg" alt="Education">
                         </div>
-                        <h5>Education</h5>
-                        <p>Ensuring access to quality education for children from disadvantaged backgrounds.</p>
+                        <div class="focus-card-content">
+                            <h5 class="focus-card-title">Education</h5>
+                            <p class="focus-card-description">Ensuring access to quality education for children from disadvantaged backgrounds.</p>
+                            <a href="donate.html" class="btn btn-card-donate btn-sm mt-auto">Donate Now</a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
+
+                <!-- Food Security -->
+                <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="focus-card">
-                        <div class="focus-icon">
-                            <i class="fas fa-utensils"></i>
+                        <div class="focus-card-image">
+                            <img src="images/Food_Img.jpg" alt="Food Security">
                         </div>
-                        <h5>Food Security</h5>
-                        <p>Distributing food and organizing nutrition programs for vulnerable populations.</p>
+                        <div class="focus-card-content">
+                            <h5 class="focus-card-title">Food Security</h5>
+                            <p class="focus-card-description">Distributing food and organizing nutrition programs for vulnerable populations.</p>
+                            <a href="donate.html" class="btn btn-card-donate btn-sm mt-auto">Donate Now</a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
+
+                <!-- Healthcare -->
+                <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="focus-card">
-                        <div class="focus-icon">
-                            <i class="fas fa-capsules"></i>
+                        <div class="focus-card-image">
+                            <img src="images/Healthcare_Img.png" alt="Healthcare">
                         </div>
-                        <h5>Healthcare</h5>
-                        <p>Facilitating access to affordable healthcare and medical assistance.</p>
+                        <div class="focus-card-content">
+                            <h5 class="focus-card-title">Healthcare</h5>
+                            <p class="focus-card-description">Facilitating access to affordable healthcare and medical assistance.</p>
+                            <a href="donate.html" class="btn btn-card-donate btn-sm mt-auto">Donate Now</a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
+
+                <!-- Shelter -->
+                <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="focus-card">
-                        <div class="focus-icon">
-                            <i class="fas fa-home"></i>
+                        <div class="focus-card-image">
+                            <img src="images/Shelter_img.png" alt="Shelter">
                         </div>
-                        <h5>Shelter</h5>
-                        <p>Providing safe housing and support programs for homeless individuals.</p>
+                        <div class="focus-card-content">
+                            <h5 class="focus-card-title">Shelter</h5>
+                            <p class="focus-card-description">Providing safe housing and support programs for homeless individuals.</p>
+                            <a href="donate.html" class="btn btn-card-donate btn-sm mt-auto">Donate Now</a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
+
+                <!-- Skill Development -->
+                <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="focus-card">
-                        <div class="focus-icon">
-                            <i class="fas fa-user-tie"></i>
+                        <div class="focus-card-image">
+                            <img src="images/SkillDeveplopment_Img.png" alt="Skill Development">
                         </div>
-                        <h5>Skill Development</h5>
-                        <p>Training programs to enhance employability and create economic opportunities.</p>
+                        <div class="focus-card-content">
+                            <h5 class="focus-card-title">Skill Development</h5>
+                            <p class="focus-card-description">Training programs to enhance employability and create economic opportunities.</p>
+                            <a href="donate.html" class="btn btn-card-donate btn-sm mt-auto">Donate Now</a>
+                        </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Programs Section -->
+    <section class="featured-programs py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-2">Quick Donate Programs</h2>
+            <p class="text-center text-muted mb-5">Choose your program and increase the number of people you want to help</p>
+            
+            <div class="row programme-grid">
+                <!-- 1. Mini Meal -->
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card programme-card">
+                        <div class="programme-card-image">
+                            <img src="images/mini_meal.png" alt="Mini Meal">
+                        </div>
+                        <div class="programme-card-body">
+                            <h5 class="programme-card-title">Mini Meal</h5>
+                            <p class="programme-card-description">Provide nutritious food to a person in need.</p>
+                            <div class="programme-price-section">
+                                <div class="quantity-selector">
+                                    <span class="quantity-label">Number of People</span>
+                                    <div class="quantity-controls">
+                                        <button class="qty-btn qty-minus" onclick="changeQuantity(this, -1)">−</button>
+                                        <span class="quantity-display">1</span>
+                                        <button class="qty-btn" onclick="changeQuantity(this, 1)">+</button>
+                                    </div>
+                                </div>
+                                <div class="programme-price">
+                                    <span class="price-label">Per Mini Meal</span>
+                                    <span class="price-amount">₹35</span>
+                                </div>
+                                <div class="programme-price">
+                                    <span class="price-label">Total Amount</span>
+                                    <span class="total-price-display" data-base-price="35">₹35</span>
+                                </div>
+                                <button class="btn-donate-programme" onclick="handleDonate(this, 35, 'Mini Meal')">Donate Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Thali -->
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card programme-card">
+                        <div class="programme-card-image">
+                            <img src="images/thali.png" alt="Thali">
+                        </div>
+                        <div class="programme-card-body">
+                            <h5 class="programme-card-title">Thali</h5>
+                            <p class="programme-card-description">Serve a complete traditional meal to a needy person.</p>
+                            <div class="programme-price-section">
+                                <div class="quantity-selector">
+                                    <span class="quantity-label">Number of People</span>
+                                    <div class="quantity-controls">
+                                        <button class="qty-btn qty-minus" onclick="changeQuantity(this, -1)">−</button>
+                                        <span class="quantity-display">1</span>
+                                        <button class="qty-btn" onclick="changeQuantity(this, 1)">+</button>
+                                    </div>
+                                </div>
+                                <div class="programme-price">
+                                    <span class="price-label">Per Thali</span>
+                                    <span class="price-amount">₹75</span>
+                                </div>
+                                <div class="programme-price">
+                                    <span class="price-label">Total Amount</span>
+                                    <span class="total-price-display" data-base-price="75">₹75</span>
+                                </div>
+                                <button class="btn-donate-programme" onclick="handleDonate(this, 75, 'Traditional Thali')">Donate Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Biryani -->
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card programme-card programme-highlight">
+                        <div class="programme-card-image">
+                            <img src="images/biryani.png" alt="Biryani">
+                        </div>
+                        <div class="programme-card-body">
+                            <h5 class="programme-card-title">Biryani</h5>
+                            <p class="programme-card-description">Share a special biryani meal with someone deserving.</p>
+                            <div class="programme-price-section">
+                                <div class="quantity-selector">
+                                    <span class="quantity-label">Number of People</span>
+                                    <div class="quantity-controls">
+                                        <button class="qty-btn qty-minus" onclick="changeQuantity(this, -1)">−</button>
+                                        <span class="quantity-display">1</span>
+                                        <button class="qty-btn" onclick="changeQuantity(this, 1)">+</button>
+                                    </div>
+                                </div>
+                                <div class="programme-price">
+                                    <span class="price-label">Per Biryani</span>
+                                    <span class="price-amount">₹100</span>
+                                </div>
+                                <div class="programme-price">
+                                    <span class="price-label">Total Amount</span>
+                                    <span class="total-price-display" data-base-price="100">₹100</span>
+                                </div>
+                                <button class="btn-donate-programme" onclick="handleDonate(this, 100, 'Special Biryani')">Donate Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Stray Dog Feeding -->
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card programme-card">
+                        <div class="programme-card-image">
+                           <img src="images/stray-dog.png" alt="stray dog feeding">
+                        </div>
+                        <div class="programme-card-body">
+                            <h5 class="programme-card-title">Feed a Stray Dog</h5>
+                            <p class="programme-card-description">Provide nourishing food to a hungry street dog.</p>
+                            <div class="programme-price-section">
+                                <div class="quantity-selector">
+                                    <span class="quantity-label">Number of Dogs</span>
+                                    <div class="quantity-controls">
+                                        <button class="qty-btn qty-minus" onclick="changeQuantity(this, -1)">−</button>
+                                        <span class="quantity-display">1</span>
+                                        <button class="qty-btn" onclick="changeQuantity(this, 1)">+</button>
+                                    </div>
+                                </div>
+                                <div class="programme-price">
+                                    <span class="price-label">Per Dog</span>
+                                    <span class="price-amount">₹35</span>
+                                </div>
+                                <div class="programme-price">
+                                    <span class="price-label">Total Amount</span>
+                                    <span class="total-price-display" data-base-price="35">₹35</span>
+                                </div>
+                                <button class="btn-donate-programme" onclick="handleDonate(this, 35, 'Feed a Stray Dog')">Donate Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Cow Feeding -->
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card programme-card">
+                        <div class="programme-card-image">
+                            <img src="images/stray-cow.png" alt="Cow Feeding">
+                        </div>
+                        <div class="programme-card-body">
+                            <h5 class="programme-card-title">Cow Feeding</h5>
+                            <p class="programme-card-description">Support animal welfare by feeding a cow.</p>
+                            <div class="programme-price-section">
+                                <div class="quantity-selector">
+                                    <span class="quantity-label">Number of Cows</span>
+                                    <div class="quantity-controls">
+                                        <button class="qty-btn qty-minus" onclick="changeQuantity(this, -1)">−</button>
+                                        <span class="quantity-display">1</span>
+                                        <button class="qty-btn" onclick="changeQuantity(this, 1)">+</button>
+                                    </div>
+                                </div>
+                                <div class="programme-price">
+                                    <span class="price-label">Per Cow</span>
+                                    <span class="price-amount">₹100</span>
+                                </div>
+                                <div class="programme-price">
+                                    <span class="price-label">Total Amount</span>
+                                    <span class="total-price-display" data-base-price="100">₹100</span>
+                                </div>
+                                <button class="btn-donate-programme" onclick="handleDonate(this, 100, 'Cow Feeding')">Donate Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. Dog Collar Kit -->
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card programme-card">
+                        <div class="programme-card-image">
+                            <img src="images/dog-color-kit.png" alt="Dog Collar">
+                        </div>
+                        <div class="programme-card-body">
+                            <h5 class="programme-card-title">Dog Collar Kit</h5>
+                            <p class="programme-card-description">Provide safety equipment for street dogs.</p>
+                            <div class="programme-price-section">
+                                <div class="quantity-selector">
+                                    <span class="quantity-label">Number of Kits</span>
+                                    <div class="quantity-controls">
+                                        <button class="qty-btn qty-minus" onclick="changeQuantity(this, -1)">−</button>
+                                        <span class="quantity-display">1</span>
+                                        <button class="qty-btn" onclick="changeQuantity(this, 1)">+</button>
+                                    </div>
+                                </div>
+                                <div class="programme-price">
+                                    <span class="price-label">Per Kit</span>
+                                    <span class="price-amount">₹300</span>
+                                </div>
+                                <div class="programme-price">
+                                    <span class="price-label">Total Amount</span>
+                                    <span class="total-price-display" data-base-price="300">₹300</span>
+                                </div>
+                                <button class="btn-donate-programme" onclick="handleDonate(this, 300, 'Dog Collar Kit')">Donate Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. Grocery Kit -->
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card programme-card">
+                        <div class="programme-card-image">
+                            <img src="images/grocery-kit.png" alt="Grocery Kit">
+                        </div>
+                        <div class="programme-card-body">
+                            <h5 class="programme-card-title">Grocery Kit</h5>
+                            <p class="programme-card-description">Essential food items for families in need.</p>
+                            <div class="programme-price-section">
+                                <div class="quantity-selector">
+                                    <span class="quantity-label">Number of Kits</span>
+                                    <div class="quantity-controls">
+                                        <button class="qty-btn qty-minus" onclick="changeQuantity(this, -1)">−</button>
+                                        <span class="quantity-display">1</span>
+                                        <button class="qty-btn" onclick="changeQuantity(this, 1)">+</button>
+                                    </div>
+                                </div>
+                                <div class="programme-price">
+                                    <span class="price-label">Per Kit</span>
+                                    <span class="price-amount">₹800</span>
+                                </div>
+                                <div class="programme-price">
+                                    <span class="price-label">Total Amount</span>
+                                    <span class="total-price-display" data-base-price="800">₹800</span>
+                                </div>
+                                <button class="btn-donate-programme" onclick="handleDonate(this, 800, 'Grocery Kit')">Donate Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8. School Bag -->
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card programme-card">
+                        <div class="programme-card-image">
+                            <img src="images/school-bag.png" alt="School Bag">
+                        </div>
+                        <div class="programme-card-body">
+                            <h5 class="programme-card-title">School Bag</h5>
+                            <p class="programme-card-description">Help a child go to school with a new bag and supplies.</p>
+                            <div class="programme-price-section">
+                                <div class="quantity-selector">
+                                    <span class="quantity-label">Number of Children</span>
+                                    <div class="quantity-controls">
+                                        <button class="qty-btn qty-minus" onclick="changeQuantity(this, -1)">−</button>
+                                        <span class="quantity-display">1</span>
+                                        <button class="qty-btn" onclick="changeQuantity(this, 1)">+</button>
+                                    </div>
+                                </div>
+                                <div class="programme-price">
+                                    <span class="price-label">Per Bag</span>
+                                    <span class="price-amount">₹500</span>
+                                </div>
+                                <div class="programme-price">
+                                    <span class="price-label">Total Amount</span>
+                                    <span class="total-price-display" data-base-price="500">₹500</span>
+                                </div>
+                                <button class="btn-donate-programme" onclick="handleDonate(this, 500, 'School Bag')">Donate Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <a href="programme.html" class="btn btn-outline-primary btn-lg">View All Programs</a>
             </div>
         </div>
     </section>
@@ -138,7 +461,8 @@
             <div class="row align-items-center">
                 <div class="col-lg-8">
                     <h2 class="text-white mb-3">Ready to Make a Difference?</h2>
-                    <p class="text-white lead">Your generous contribution can change lives and build a stronger community.</p>
+                    <p class="text-white lead">Your generous contribution can change lives and build a stronger
+                        community.</p>
                 </div>
                 <div class="col-lg-4 text-center">
                     <a href="donate.html" class="btn btn-donate btn-lg">Donate Now</a>
@@ -169,7 +493,8 @@
                 <div class="col-lg-3 col-md-6 mb-4">
                     <h5 class="footer-title">Contact</h5>
                     <p><i class="fas fa-map-marker-alt"></i> Paschim Bardhaman, West Bengal</p>
-                    <p><i class="fas fa-envelope"></i> <a href="mailto:info@gayatringno.org">info@gayatringno.org</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:info@gayatringno.org">info@gayatringno.org</a>
+                    </p>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
                     <h5 class="footer-title">Follow Us</h5>
@@ -192,5 +517,12 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/918527494142" class="whatsapp-button" target="_blank" rel="noopener noreferrer" title="Chat on WhatsApp">
+        <span class="whatsapp-tooltip">Chat with us</span>
+        <i class="fab fa-whatsapp"></i>
+    </a>
 </body>
+
 </html>
